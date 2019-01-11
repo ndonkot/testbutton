@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script>
-function myFunction() {
-  //document.getElementById("demo").innerHTML = "Paragraph changed.";
-   window.location.href=" https://fripst-web.herokuapp.com/external/request?username=tndonko1@gmail.com&password=Pepekale1984*&valeur=5000";
-}
-</script>
+
 </head>
 <body>
 
 <h2>JavaScript in Head</h2>
 
-<p id="demo">A Paragraph.</p>
 
-<button type="button" onclick="myFunction()">Try it</button>
+<form>
+    <p id="demo">5500</p>
+  E-mail:
+  <input type="email" id="textbox_id" name="email"><br>
+  <button type="button" onclick="myFunction()">Try it</button>
+</form>
 
+
+
+
+<script>
+  function myFunction() {
+    //document.getElementById("demo").innerHTML = "Paragraph changed.";
+   //  window.location.href=" https://fripst-web.herokuapp.com/external/request?username=tndonko1@gmail.com&valeur=5000";
+  //&password=Pepekale1984*
+   var value= document.getElementById("demo").innerHTML;
+  // alert(value);
+  var email=document.getElementById('textbox_id').value;
+ // alert(email);
+ //  window.location.href="http://localhost:4200/external/request?username="+email+"&valeur="+value+"&123456=123456789";
+
+   window.location.href=" https://fripst-web.herokuapp.com/external/request?username="+email+"&valeur="+value+"&123456=123456789";
+  }
+  </script>
 </body>
 </html> 
